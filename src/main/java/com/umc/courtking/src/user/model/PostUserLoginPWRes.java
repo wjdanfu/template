@@ -1,4 +1,4 @@
-package com.umc.courtking.src.model;
+package com.umc.courtking.src.user.model;
 
 
 import lombok.AllArgsConstructor;
@@ -8,6 +8,8 @@ import lombok.Setter;
 @Getter
 @Setter
 @AllArgsConstructor
-public class PostUserRes {
+public class PostUserLoginPWRes {
+    private String email;
+    private String password;
     private int userIdx;
 }
