@@ -42,7 +42,7 @@ public class UserController {
 
     @ResponseBody
     @PostMapping("/users")
-    public BaseResponse<PostUserRes> createUser(@RequestBody PostUserReq postUserReq) throws BaseException {
+    public BaseResponse createUser(@RequestBody PostUserReq postUserReq) throws BaseException {
         //req에 입력하지 않은 경우
         if(postUserReq.getEmail() == null || postUserReq.getPassword()==null || postUserReq.getName()==null){
             return new BaseResponse<>(REQUEST_ERROR);
@@ -55,7 +55,7 @@ public class UserController {
         try{
             PostUserRes postUserRes = userService.createUser(postUserReq);
 
-            return new BaseResponse<>(postUserRes);
+            return new BaseResponse();
         } catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));
         }
@@ -76,11 +76,11 @@ public class UserController {
     }
     @ResponseBody
     @GetMapping("/users/auto-login")
-    public BaseResponse<GetAutoRes> autologin() throws BaseException{
+    public BaseResponse autologin() throws BaseException{
         try{
                 int userIdx=jwtService.getUserIdx();
                 GetAutoRes getAutoRes = userProvider.getAuto(userIdx);
-                return new BaseResponse<>(getAutoRes);
+                return new BaseResponse();
 
         }catch(BaseException exception){
             return new BaseResponse<>((exception.getStatus()));

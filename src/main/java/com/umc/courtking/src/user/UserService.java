@@ -74,7 +74,7 @@ public class UserService {
         //jwt발급
         String jwt = jwtService.createJwt(userIdx);
 
-        return new PostUserLoginRes(jwt);
+        return new PostUserLoginRes(userIdx,jwt);
     }
 
 }

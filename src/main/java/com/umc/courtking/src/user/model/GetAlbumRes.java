@@ -9,5 +9,5 @@ public class GetAlbumRes {
     private int albumIdx;
     private String title;
     private String singer;
-    private String coverImg;
+    private String coverImgUrl;
 }

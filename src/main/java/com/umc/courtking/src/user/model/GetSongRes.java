@@ -12,5 +12,5 @@ public class GetSongRes {
     private int albumIdx;
     private String singer;
     private String title;
-    private String coverImg;
+    private String coverImgUrl;
 }
