@@ -1,4 +1,4 @@
-package com.umc.courtking.src.model;
+package com.umc.courtking.src.user.model;
 
 import lombok.AllArgsConstructor;
 import lombok.Getter;

@@ -1,8 +1,6 @@
 package com.umc.courtking.src.user;
 
-import com.umc.courtking.src.model.*;
-import com.umc.courtking.src.model.GetUserRes;
-import com.umc.courtking.src.model.PostUserReq;
+import com.umc.courtking.src.user.model.*;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.jdbc.core.JdbcTemplate;
 import org.springframework.stereotype.Repository;
