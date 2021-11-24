@@ -35,16 +35,16 @@ public class UserController {
     }
 
     @GetMapping("/users")
-    public List<GetUserRes> getUser(){
+    public BaseResponse<List<GetUserRes>> getUser(){
         List<GetUserRes> userRes = userProvider.getUser();
-        return userRes;
+        return new BaseResponse<>(userRes);
     }
 
     @ResponseBody
     @PostMapping("/users")
-    public PostUserRes postUser(@RequestBody PostUserReq postUserReq){
+    public BaseResponse<PostUserRes> postUser(@RequestBody PostUserReq postUserReq){
         PostUserRes postUserRes = userProvider.postUser(postUserReq);
-        return postUserRes;
+        return new BaseResponse<>(postUserRes);
     }
 
 }
